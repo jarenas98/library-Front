@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header>
+      <mat-card-title>
+          {{book.title| uppercase}}
+      </mat-card-title>
+      <mat-card-subtitle>
+         edad minima: {{book.requiredAge}}
+      </mat-card-subtitle>
+  </mat-card-header>
+  <div class="crop-image">
+    <img [src]="book.portada" alt="imagen de producto">
+  </div>
+  <mat-card-content>
+      <p>{{book.description  | slice:0:11}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+      <a mat-raised-button color="primary" [routerLink]="[book.id]">Prestar</a>
+
+  </mat-card-actions>
+</mat-card>
+

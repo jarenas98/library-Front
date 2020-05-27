@@ -1,0 +1,6 @@
+<div class="book-grid">
+  <!--Componente -->
+  <div *ngFor="let book of books">
+    <app-loan  *ngIf="!book.state" [book]="book"></app-loan>
+</div>
+</div>

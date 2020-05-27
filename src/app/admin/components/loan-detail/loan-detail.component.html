@@ -1,0 +1,24 @@
+<form   [formGroup]='form' (ngSubmit)="saveLoan(form.value)">
+  <mat-card>
+      <mat-card-title>
+        Realizar prestamo a
+      </mat-card-title>
+      <mat-card-content>
+
+
+
+        <div class="fields-container">
+          <mat-form-field>
+            <input matInput formControlName="clientId" placeholder="Id Cliente" type="number">
+          </mat-form-field>
+
+        </div>
+
+
+
+      </mat-card-content>
+      <mat-card-actions>
+        <button [disabled]="form.invalid" mat-raised-button color="primary"  type="submit">Prestar</button>
+      </mat-card-actions>
+  </mat-card>
+</form>
